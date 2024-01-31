@@ -13,13 +13,13 @@
          
          {
           "src" : "icon.jpg", "type" : "image/jpg" ,
-          "purpose": "any",
+          "purpose": "maskable",
           "size":"144×144"
          } ,
          
          {
 "src" : "icon(1).jpg", "type" : "image/jpg" ,
-"purpose": "any",
+"purpose": "maskable",
           "size":"512×512"
          }
           
