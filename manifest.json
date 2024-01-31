@@ -3,6 +3,8 @@
      "short_name":"pwa",
      "theme_color":"white",
      "background_color":"white",
+     "description":"trying to make a installable pwa",
+      "orientation":"portrait-primary",
      "display":"standalone",
      "start_url":"index.html",
      "prefer_related_applications": false,
