@@ -6,6 +6,7 @@
      "description":"trying to make a installable pwa",
       "orientation":"portrait-primary",
      "display":"standalone",
+       "display_override": ["fullscreen", "minimal-ui"],
      "start_url":"index.html",
      "prefer_related_applications": false,
      "icons":[
