@@ -15,6 +15,7 @@ self.addEventListener('install', (event) => {
       caches.open(cacheName).then((cache) => {
             return cache.addAll([
                     '/',
+                    'https://deepakkotary.github.io/win/index.html',
                     './index.html',
                             './Index.js',
                             './manifest.json',
