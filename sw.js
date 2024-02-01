@@ -1,7 +1,7 @@
 self.addEventListener('install',ev=>{
  ev.waitUntill(
      caches.open('V1').then(cache=>{
-      Cache.addAll([
+      cache.addAll([
            "/",
            "/Index.js",
            "manifest.json",
@@ -17,6 +17,6 @@ self.addEventListener('install',ev=>{
 })
 
 
-// beforeinstallprompt
+
 
 
