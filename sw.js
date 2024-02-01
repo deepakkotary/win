@@ -24,6 +24,8 @@ self.addEventListener('install',(event)=>{
 //fetching
 
 
+
+                                                                 
 self.addEventListener('fetch', (event) => {
        event.respondWith(
            caches.match(event.request).then((response) => {
@@ -35,4 +37,5 @@ self.addEventListener('fetch', (event) => {
                                                            });
                                                                })
                                                                  );
-                                                                 )
+                                                                 });
+})
