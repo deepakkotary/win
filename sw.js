@@ -5,7 +5,13 @@ self.addEventListener('install',(event)=>{
              [
 "/win",
 
-                  "/win/index.html"
+                  "/win/index.html",
+                  "/win/Index.js",
+                  "/win/manifest.json",
+                  "/win/icon.jpg",
+                  "/win/icon(1).jpg"
+
+
                   ]
              )
    })       
