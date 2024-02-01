@@ -1,7 +1,6 @@
 self.addEventListener('install',ev=>{
-     console.log(ev);
  ev.waitUntill(
-     caches.open('cha').then(Cache=>{
+     caches.open('V1').then(cache=>{
       Cache.addAll([
            "index.html",
            "Index.js",
