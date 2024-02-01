@@ -20,7 +20,4 @@ self.addEventListener('install',ev=>{
 
 // beforeinstallprompt
 
-addEventListener("beforeinstallprompt", (event) => {
-     event.preventDefault();
-     alert(hi);
-});
+
