@@ -3,8 +3,9 @@ self.addEventListener('install',(event)=>{
    caches.open('lala').then(Cache=>{
         Cache.addAll(
              [
-                  "/",
-                  "index.html"
+"/win",
+
+                  "/win/index.html"
                   ]
              )
    })       
