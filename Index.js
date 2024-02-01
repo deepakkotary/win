@@ -1,9 +1,8 @@
 // registration 
 
-// PWA main script
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js');
+  navigator.serviceWorker.register('/win/sw.js');
 }
 
 
