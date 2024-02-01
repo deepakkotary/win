@@ -1,8 +1,8 @@
 self.addEventListener('install',ev=>{
  ev.waitUntill(
      caches.open('V1').then(cache=>{
-      cache.addAll([
-           "https://deepakkotary.github.io/win/",
+      Cache.addAll([
+           "/",
            "/Index.js",
            "manifest.json",
            "icon.jpg",
