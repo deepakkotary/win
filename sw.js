@@ -15,10 +15,11 @@ self.addEventListener('install', (event) => {
       caches.open(cacheName).then((cache) => {
             return cache.addAll([
                     '/',
-                            '/Index.js',
-                            '/manifest.json',
-                            'icon.jpg',
-                            'icon(1).jpg'
+                    './index.html'
+                            './Index.js',
+                            './manifest.json',
+                            './icon.jpg',
+                            './icon(1).jpg'
 
                                     // Add other files you want to cache
                                           ]);
