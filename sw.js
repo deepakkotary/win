@@ -75,7 +75,7 @@ self.addEventListener('message', (event) => {
 // Prompt the user to update when a new version is available
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'promptUpdate') {
-    if (confirm('A new version is available. Do you want to update?')) {
+    if ( confirm ('A new version is available. Do you want to update?')) {
       self.skipWaiting();
       clients.claim();
     }
