@@ -43,3 +43,5 @@ document.body.requestFullscreen().then(res=>{
       return res;
 })
 }
+
+fuck();
