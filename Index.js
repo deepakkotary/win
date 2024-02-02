@@ -41,7 +41,10 @@ if ('serviceWorker' in navigator) {
 function fuck (){
 document.body.requestFullscreen().then(res=>{
       return res;
+      console.log(res);
 })
 }
 
-fuck();
+window.addEventListener('load',()=>{
+  fuck();   
+})
