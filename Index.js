@@ -31,3 +31,15 @@ if ('serviceWorker' in navigator) {
     refreshing = true;
   });
 }
+
+
+
+
+
+//app js
+
+function fuck (){
+document.body.requestFullscreen().then(res=>{
+      return res;
+})
+}
