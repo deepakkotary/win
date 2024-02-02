@@ -11,7 +11,8 @@ self.addEventListener('install',(event)=>{
                   "/win/Index.js",
                   "/win/manifest.json",
                   "/win/icon.jpg",
-                  "/win/icon(1).jpg"
+                  "/win/icon(1).jpg",
+                  "/win/index.css"
 
 
                   ]
