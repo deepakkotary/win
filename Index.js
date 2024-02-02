@@ -38,13 +38,3 @@ if ('serviceWorker' in navigator) {
 
 //app js
 
-function fuck (){
-document.body.requestFullscreen().then(res=>{
-      return res;
-      console.log(res);
-})
-}
-
-window.addEventListener('load',()=>{
-  fuck();   
-})
