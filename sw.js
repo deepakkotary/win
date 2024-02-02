@@ -5,13 +5,13 @@ self.addEventListener('install',(event)=>{
    caches.open(cacheName).then(Cache=>{
         Cache.addAll(
              [
-"/win",
-
+               "/win",
+               
                   "/win/index.html",
                   "/win/Index.js",
                   "/win/manifest.json",
                   "/win/icon.jpg",
-                  "/win/icon(1).jpg",
+                  "/win/icon (1).jpg",
                   "/win/index.css"
 
 
