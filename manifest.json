@@ -1,7 +1,7 @@
 {
      "name":"pwa",
      "short_name":"pwa",
-     "theme_color":"white",
+     "theme_color":"red",
      "background_color":"white",
      "description":"trying to make a installable pwa",
       "orientation":"portrait-primary",
