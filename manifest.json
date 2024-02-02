@@ -5,8 +5,8 @@
      "background_color":"white",
      "description":"trying to make a installable pwa",
       "orientation":"portrait-primary",
-     "display":"fullscreen",
-       "display_override": ["fullscreen", "minimal-ui"],
+     "display":"standalone",
+       "display_override": ["standalone", "minimal-ui"],
      "start_url":"index.html",
      "prefer_related_applications": false,
      "icons":[
