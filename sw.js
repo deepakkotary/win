@@ -6,7 +6,7 @@ self.addEventListener('install',(event)=>{
         Cache.addAll(
              [
                "/win",
-               
+               "/win/app.js",
                   "/win/index.html",
                   "/win/Index.js",
                   "/win/manifest.json",
