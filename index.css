@@ -7,6 +7,9 @@ body {
      margin: 0px;
      padding: 0px;
      background-color: whitesmoke ;
+     overflow: hidden;
+     position: relative;
+     
 }
 
 .container{
@@ -23,6 +26,19 @@ body {
      width: 100%;
      height: 8%;
 }
+
+/* styling to header-menu */
+
+.header-menu{
+     background-color: transparent;
+     width: 96%;
+     height: 100%;
+     margin: auto;
+      display: flex; 
+     
+}
+
+
 
 .middle {
      background-color: transparent;
@@ -88,7 +104,7 @@ body {
      margin-bottom: 4px;
 }
 
-textarea{
+textarea {
      resize: none;
      background-color: transparent;
      outline: 0px;
@@ -108,3 +124,50 @@ textarea::-webkit-scrollbar{
      width: 0px;
      height: 0px;
 }
+
+
+ /* creating a flotting button */ 
+ .float{
+      background-color: whitesmoke;
+      /* border: 2px solid black; */
+      box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 70px;
+      height: 70px;
+    /*   position: fixed;
+      top: 40%;
+      right: 10px; */
+      border-radius:100%;
+      
+      /* display: none; */
+      /* visibility: hidden; */
+      
+ }
+ .menu{
+      padding: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+ } 
+ #btn{
+      background-color: transparent;
+      /* height: 50px;
+      width: 50px; */
+      font-size: 45px;
+      display: flex;
+      justify-content: center;
+      border: 0px;
+      outline: 0px;
+      opacity: 0.5;
+      align-items: center;
+ }
+ 
+ .addPage{
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+ }

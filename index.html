@@ -12,11 +12,16 @@
 <body>
      <!--  main container -->
      <div class="container">
-          <div class="header"></div>
+          <div class="header">
+  <div class="header-menu">
+
+  </div> 
+  <!-- end of header-menu -->
+          </div>
           <!--end headder -->
           <div class="middle">
                <!-- making a slider  -->  <div class="slider">
-                    <div class="slide" id="a">
+                    <div class="slide">
                          <div class="tile">
                               <h4>hello</h4>
                          </div>
@@ -27,7 +32,7 @@
                          <!-- end of notes -->
                     </div>
                     <!-- end of a -->
-                    <div class="slide" id="b">
+                    <div class="slide">
                                                  <div class="tile">
                               <h4>hello</h4>
                          </div>
@@ -38,7 +43,7 @@
                          <!-- end of notes --> 
                     </div>
                     <!-- end of b -->
-                    <div class="slide" id="c">
+                    <div class="slide">
                                                  <div class="tile">
                               <h4>hello</h4>
                          </div>
@@ -49,7 +54,7 @@
                          <!-- end of notes --> 
                     </div>
                     <!-- end of c -->
-                    <div class="slide" id="d">
+                    <div class="slide" >
                                                 <div class="tile">
                               <h4>hello</h4>
                          </div>
@@ -60,6 +65,21 @@
                          <!-- end of notes -->  
                     </div>
                     <!-- end of d -->
+  
+  <!-- creating a page    -->             
+  <div class="slide addPage">
+  <!-- craeting a flowing menu -->
+<div class="float">
+ <div class="menu">
+       <!-- creating a button for creating new slides -->
+ <button type="button" id="btn" onclick="newDisk()" ><span>&plus;</span></button> 
+<!--end of btn   -->    
+ </div>    
+</div>     
+       
+  </div>                  
+                    
+                    
                </div>
                <!-- end of slider -->
           </div>
@@ -70,14 +90,21 @@
 
 
 
+
+
+
+
+
+
+
      <!-- app script  -->
      <script src="app.js"></script>
 
 
      <!-- script for service worker  -->
 
-           <script src="Index.js">
-          </script> 
+            <script src="Index.js">
+          </script>  
 
 </body>
 </html>
