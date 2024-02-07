@@ -1,15 +1,3 @@
-// var slider = document.querySelector('.slider');
-// var slide = document.querySelector('.slide');
-// console.log(slide);
-// var clone = slide.cloneNode(true);
-// console.log(clone);
-
-
-
-// id genator 
-//1. cloning
-// 2. id providing, in reference of previous slide
-
 
 var i = 0;
 function fuck(){
@@ -27,14 +15,7 @@ function newDisk(){
 var slide = document.querySelector('.slide');
 console.log(slide);
 var clone = slide.cloneNode(true);
-//console.log(clone);   
- 
- // hidden to floating menu 
- 
- // document.querySelector('.float').style.visibility='hidden';
-     
-     
- // element getting   
+
    
    //appending  
 //var newSlide = slider.appendChild(clone);
@@ -62,17 +43,15 @@ var h4 = tile.firstElementChild;
 // value zero
 newTextarea.value="";
 
+// id giving
+
+var f = ++i;
+ var id = 't'+f ;
+ console.log('id:',id);
+
+clone.setAttribute('id',id)
+
+console.log(clone)
+
+
 }
-// creating a btn for making new slides
-
-// document.querySelector('textarea').addEventListener('focus',()=>{
-// var float= document.querySelector('.float');  
-//float.style.display='value';
-// float.style.visibility='visible';
-// })
-
-
-
-// document.querySelector('textarea').addEventListener('blur',()=>{
-//   document.querySelector('.float').style.visibility='hidden';
-// })
