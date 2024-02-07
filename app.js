@@ -40,26 +40,29 @@ var clone = slide.cloneNode(true);
 //var newSlide = slider.appendChild(clone);
 // before insert
 var addPage = document.querySelector('.addPage');
+
+// var newSlide = clone;
 slider.insertBefore(clone,addPage);
 
 
 
 
 
-console.log(newSlide);
-var notes = newSlide.children[1];
+//console.log(newSlide);
+var notes = clone.children[1];
 //console.log(notes);
 var newTextarea = notes.firstElementChild;
 //console.log(newTextarea);
-var tile = newSlide.firstElementChild;
+var tile = clone.firstElementChild;
 //console.log(tile);
 var h4 = tile.firstElementChild;
 //console.log(h4);
 
 
+// value zero
+newTextarea.value="";
+
 }
-
-
 // creating a btn for making new slides
 
 // document.querySelector('textarea').addEventListener('focus',()=>{
