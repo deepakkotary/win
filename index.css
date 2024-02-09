@@ -73,8 +73,7 @@ body {
    padding: 15px;
    display: flex;
    position: relative;
-/*    border: 2px solid black; */
-/* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+
 }
 
 .slider::-webkit-scrollbar{
@@ -186,4 +185,4 @@ textarea::-webkit-scrollbar{
 
 textarea::placeholder{
      margin: 5px;
-} 
+}

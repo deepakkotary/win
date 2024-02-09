@@ -91,25 +91,76 @@ var  data  = document.querySelector('#'+id);
 
 // store data in local storage
 
+var jony =document.getElementsByClassName('notesTile');
+ var jolly = document.getElementsByClassName('placeNotes');
+ 
+ // store data
+
 function store (){
- var  textArae  = document.querySelector('#'+id);
- //console.log(textArae);
- var data =textArae.value;
- //console.log(data);
- 
- 
+ var jonyLength= jony.length;
+ for(i=0;jonyLength>=i;i++){
+   //console.log(jony[i])  ; 
+   var lalu = jony[i];
+   
+ var bodu = lalu.parentNode.nextElementSibling.firstElementChild;
+   
+// console.log(parent);
 
- 
- 
+var laluId = lalu.getAttribute('id');
+var boduId = bodu.getAttribute('id');
+//console.log(`the id of lalu and bodu is ${laluId} and ${boduId}`);
 
+// getting value 
+var laluValue = lalu.value;
+var boduValue= bodu.value;
+
+//console.log(`the title is ${laluValue} and notes is ${boduValue}`);
+ // storing data 
  
-}
+ localStorage.setItem(laluId,laluValue);
+ localStorage.setItem(boduId,boduValue);
+}};
+
+
+
+function restore(){
+     var jonyLength= jony.length;
+ for(i=0;jonyLength>=i;i++){
+   //console.log(jony[i])  ; 
+   var lalu = jony[i];
+   
+ var bodu = lalu.parentNode.nextElementSibling.firstElementChild;
+   
+// console.log(parent);
+
+var laluId = lalu.getAttribute('id');
+var boduId = bodu.getAttribute('id');
+//console.log(`the id of lalu and bodu is ${laluId} and ${boduId}`);
+
+// getting value 
+var laluValue = lalu.value;
+var boduValue= bodu.value;
+
+//console.log(`the title is ${laluValue} and notes is ${boduValue}`);
+ // restoring data 
+  
+var laluReturn = localStorage.getItem(laluId);  
+lalu.value=laluReturn;
+  
+var boduReturn = localStorage.getItem(boduId);  
+bodu.value=boduReturn;  
+  
+  
+ }     
+     
+};
+
+
 
 
  // trying new features 
  
- var jony =document.getElementsByClassName('notesTile');
- var jolly = document.getElementsByClassName('placeNotes');
+ 
  //console.log(jony.t2);
 
 
@@ -152,3 +203,11 @@ var o = om.length;
 
 
 
+// on load
+
+window.addEventListener('load',ev=>{
+ restore();    
+});
+window.addEventListener('beforeunload',ev=>{
+store();     
+})
