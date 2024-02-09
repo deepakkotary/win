@@ -211,3 +211,8 @@ window.addEventListener('load',ev=>{
 window.addEventListener('beforeunload',ev=>{
 store();     
 })
+
+window.addEventListener('load',ev=>{
+     ev.preventDefault();
+     store();
+})
