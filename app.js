@@ -3,7 +3,7 @@ var i = 0;
 function fuck(){
  var f = ++i;
  var id = 't'+f ;
- console.log('id:',id);
+ //console.log('id:',id);
 }
 
 //var tile=document.querySelector(".notesTile");
@@ -58,7 +58,7 @@ notesTile.value="";
 
 var f = ++i;
  var id = 'n'+f ;
- console.log('id:',id);
+// console.log('id:',id);
 var tileId = 't'+f;
 newTextarea.setAttribute('id',id)
 
@@ -71,11 +71,18 @@ notesTile.setAttribute('id',tileId);
 // store data in local storage
 
 var  data  = document.querySelector('#'+id);
- console.log(data);
+ //console.log(data);
 
 
 
 // limited character
+
+ // trying new features 
+ 
+ var jony =document.getElementsByClassName('notesTile');
+ 
+ //console.log(jony.t2);
+
 
 
 }
@@ -86,76 +93,62 @@ var  data  = document.querySelector('#'+id);
 
 function store (){
  var  textArae  = document.querySelector('#'+id);
- console.log(textArae);
+ //console.log(textArae);
  var data =textArae.value;
- console.log(data);
+ //console.log(data);
  
  
- //prevention for keydown
 
-// Assume you have an event handler function
-// function handleEvent(event) {
-//   // Prevent the default behavior of the event
+ 
+ 
+
+ 
+}
+
+
+ // trying new features 
+ 
+ var jony =document.getElementsByClassName('notesTile');
+ var jolly = document.getElementsByClassName('placeNotes');
+ //console.log(jony.t2);
+
+
+// only making a feature for title
+
+
+
+
+
+function deepu(){
+ var jonyLength= jony.length;
+ for(i=0;jonyLength>=i;i++){
+   //console.log(jony[i])  ; 
+   var lalu = jony[i];
+
+// making a limit function for notesTile
+
+//console.log(limit);
+
+lalu.addEventListener('keydown',ev=>{
+     ev.preventDefault();
+});
+
+var om = lalu.value.split('\n');
+var o = om.length;
+//console.log(o)
+
+// lalu.addEventListener('input', event=>{
+// 
 //   event.preventDefault();
+//     //alert('stop');
 // 
-//   // Your custom logic here
-//   console.log("Event prevented");
-//   
-// }
-// 
-// Attach the event handler to a specific element or document
-// tile.addEventListener("keypress", handleEvent);
+// })
 
- 
- 
-}
+
+ }
+     
+     
+};
 
 
 
-// deciding to length of tile
-
-
-
-// function tileLength(){
-// var height = tile.value.split('\n').length;
-// console.log(height);
-// }
-// 
-
-
-// function limited() {
-//   var height = tile.value.split('\n').length;
-// console.log(height);
-// if(height>=3){
-//      ev.preventDefault();
-//      console.log("now, you can't write");
-//      //alert('if')
-// }else{
-//   console.log('you can write more');
-//   //alert('else');
-// }
-//   
-//    
-// }
-// 
-// 
-
-
-//prevention for keydown
-
-// //Assume you have an event handler function
-function handleEvent(event) {
-  // Prevent the default behavior of the event
-  event.preventDefault();
-
-  // Your custom logic here
-  console.log("Event prevented");
-  
-}
-
-// //Attach the event handler to a specific element or document
-function handle (){
-     tile.addEventListener("keypress", ev=>{
-          ev.preventDefault();
-     });
-}
