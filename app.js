@@ -119,6 +119,11 @@ var boduValue= bodu.value;
  
  localStorage.setItem(laluId,laluValue);
  localStorage.setItem(boduId,boduValue);
+ 
+////////////>
+
+
+
 }};
 
 
@@ -203,16 +208,61 @@ var o = om.length;
 
 
 
+
+
+
+// slide restablizing
+
+function restablize (){
+     // Loop through all keys in LocalStorage
+for (let i = 0; i < localStorage.length; i++) {
+    let key = localStorage.key(i);
+    console.log("Key:", key);
+    
+}
+}
+
+
+
+var slider = document.querySelector('.slider') ; 
+//////////////!/>
+
+function storeSlider(){
+ var slider = document.querySelector('.slider')    
+var slides =slider.innerHTML;
+localStorage.setItem('data',slides);
+console.log(slides);
+}
+
+function restoreSlider(){
+var recieve = localStorage.getItem('data') ;
+//console.log(recieve);
+ var div = document.createElement("div");
+div.className='slider';
+ div.innerHTML= recieve;
+console.log(div);
+
+
+////////////>
+
+slider.parentNode.replaceChild(div, slider);
+
+}
+
+
+
+
+///////>>>>>
+
 // on load
 
 window.addEventListener('load',ev=>{
+restoreSlider();     
  restore();    
 });
+//>
 window.addEventListener('beforeunload',ev=>{
-store();     
+store(); 
+storeSlider();
 })
-
-window.addEventListener('load',ev=>{
-     ev.preventDefault();
-     store();
-})
+//>

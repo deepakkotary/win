@@ -28,8 +28,18 @@ self.addEventListener('install',(event)=>{
 
 
 
-                                                                 
-self.addEventListener('fetch', (event) => {
+
+
+    // Send a request to the server to save information about the added element
+    
+  
+
+
+
+
+
+
+                                          self.addEventListener('fetch', (event) => {
        event.respondWith(
            caches.match(event.request).then((response) => {
                  return response || fetch(event.request).then((fetchResponse) => {
@@ -73,15 +83,15 @@ self.addEventListener('message', (event) => {
 });
 
 // Prompt the user to update when a new version is available
-self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'promptUpdate') {
-    if ( confirm ('A new version is available. Do you want to update?')) {
-      self.skipWaiting();
-      clients.claim();
-    }
-  }
-});
-
+// self.addEventListener('message', (event) => {
+//   if (event.data && event.data.type === 'promptUpdate') {
+//     if ( confirm ('A new version is available. Do you want to update?')) {
+//       self.skipWaiting();
+//       clients.claim();
+//     }
+//   }
+// });
+// 
 
 
 
