@@ -263,6 +263,13 @@ restoreSlider();
 //>
 window.addEventListener('beforeunload',ev=>{
 store(); 
-storeSlider();
+//storeSlider();
 })
-//>
+
+
+
+/////////////////>
+document.querySelector('.bton').addEventListener('click',()=>{
+  //store();
+  storeSlider();
+})
