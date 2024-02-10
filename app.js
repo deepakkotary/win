@@ -224,7 +224,7 @@ for (let i = 0; i < localStorage.length; i++) {
 
 
 
-var slider = document.querySelector('.slider') ; 
+
 //////////////!/>
 
 function storeSlider(){
@@ -235,6 +235,7 @@ console.log(slides);
 }
 
 function restoreSlider(){
+ var slider = document.querySelector('.slider') ;     
 var recieve = localStorage.getItem('data') ;
 //console.log(recieve);
  var div = document.createElement("div");
