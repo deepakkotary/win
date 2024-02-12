@@ -190,36 +190,6 @@ bodu.value=boduReturn;
 
 
 
-function deepu(){
- var jonyLength= jony.length;
- for(i=0;jonyLength>=i;i++){
-   //console.log(jony[i])  ; 
-   var lalu = jony[i];
-
-// making a limit function for notesTile
-
-//console.log(limit);
-
-lalu.addEventListener('keydown',ev=>{
-     ev.preventDefault();
-});
-
-var om = lalu.value.split('\n');
-var o = om.length;
-//console.log(o)
-
-// lalu.addEventListener('input', event=>{
-// 
-//   event.preventDefault();
-//     //alert('stop');
-// 
-// })
-
-
- }
-     
-     
-};
 
 
 
@@ -227,16 +197,6 @@ var o = om.length;
 
 
 // slide restablizing
-
-function restablize (){
-     // Loop through all keys in LocalStorage
-for (let i = 0; i < localStorage.length; i++) {
-    let key = localStorage.key(i);
-    console.log("Key:", key);
-    
-}
-}
-
 
 
 
@@ -246,7 +206,7 @@ function storeSlider(){
  var slider = document.querySelector('.slider')    
 var slides =slider.innerHTML;
 localStorage.setItem('data',slides);
-console.log(slides);
+//console.log(slides);
 }
 
 var slider = document.querySelector('.slider'); 
@@ -258,7 +218,7 @@ var recieve = localStorage.getItem('data') ;
  var div = document.createElement("div");
 div.className='slider';
  div.innerHTML= recieve;
-console.log(div);
+//console.log(div);
 
 
 ////////////>
@@ -271,6 +231,39 @@ slider.parentNode.replaceChild(div, slider);
 
 
 
+///////>>>>>
+
+//trying to make a auto matic delectation of slides
+function deleteSlide(){
+     
+  var jonyLength= jony.length;
+ for(i=0;jonyLength>=i;i++){
+   //console.log(jony[i])  ; 
+   var lalu = jony[i];
+   var laluId = lalu.getAttribute('id');
+var bodu =  lalu.parentNode.nextElementSibling.firstElementChild;
+ var boduId = bodu.getAttribute('id');
+ var laluData = localStorage.getItem(laluId);
+ var boduData = localStorage.getItem(boduId);
+ var bap = lalu.parentNode.parentNode;
+ if(laluData===""&& boduData===""){
+   //console.log(laluId,bap) ; 
+ bap.remove();  
+  // console.log(boduId,bap);
+     
+}else{
+     console.log('200')
+}
+      
+      
+      
+ }}
+
+
+///////>>>>>
+///////>>>>>
+///////>>>>>
+///////>>>>>
 ///////>>>>>
 
 
@@ -305,7 +298,7 @@ if(d===null||d===undefined){
   console.log("This block always runs");
   ///>
 //restoreSlider(); 
-
+deleteSlide();
 
 
 
