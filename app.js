@@ -246,21 +246,19 @@ var bodu =  lalu.parentNode.nextElementSibling.firstElementChild;
  var laluData = localStorage.getItem(laluId);
  var boduData = localStorage.getItem(boduId);
  var bap = lalu.parentNode.parentNode;
- if(laluData===""&& boduData===""){
-   //console.log(laluId,bap) ; 
  
-  // console.log(boduId,bap);
+
 if(laluId==='t'){
-    // alert(laluId)
+ console.log(laluId);
+ 
 }else{
+ if(laluData===""&& boduData===""){
       bap.remove(); 
-}  
-  
-  
-  
-     
+
 }else{
      console.log('200')
+}
+          
 }
       
       
