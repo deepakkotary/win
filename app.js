@@ -248,8 +248,16 @@ var bodu =  lalu.parentNode.nextElementSibling.firstElementChild;
  var bap = lalu.parentNode.parentNode;
  if(laluData===""&& boduData===""){
    //console.log(laluId,bap) ; 
- bap.remove();  
+ 
   // console.log(boduId,bap);
+if(laluId==='t'){
+    // alert(laluId)
+}else{
+      bap.remove(); 
+}  
+  
+  
+  
      
 }else{
      console.log('200')
@@ -261,6 +269,28 @@ var bodu =  lalu.parentNode.nextElementSibling.firstElementChild;
 
 
 ///////>>>>>
+
+function startSlide(){
+var oldSlider = document.querySelector('.slider');    
+var firstData = localStorage.getItem('t');
+var ourData = '                    <div class="slide"><div class="tile"><textarea onkeydown="deepu()" placeholder="Title"maxlength="100"  class="notesTile"id="t"></textarea></div><!-- end of title --><div class="notes"><textarea id="n" placeholder="your thoughts" class="placenotes"></textarea></div>end of notes --></div>';
+var newDiv = document.createElement('div');
+newDiv.innerHTML=ourData;
+if(firstData===null||firstData===undefined){
+     
+ //slider.appendChild(newDiv);
+ //console.log(newDiv);
+ //alert('300') 
+ localStorage.setItem('t','hello');    
+} else if (firstData===""){
+   alert('200') 
+    //slider.appendChild(newDiv);
+ // console.log(newDiv)  
+    
+}
+}
+
+
 ///////>>>>>
 ///////>>>>>
 ///////>>>>>
@@ -284,6 +314,7 @@ if(d===null||d===undefined){
 }else{
  //restoreSlider();
  console.log('trying to store data');
+ //startSlide();
  restoreSlider();
 }
 ////>
