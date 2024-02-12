@@ -84,6 +84,8 @@ var  data  = document.querySelector('#'+id);
  //console.log(jony.t2);
 
 
+//////>>>>>
+//storeSlider();
 
 }
 
@@ -134,7 +136,11 @@ function restore(){
    //console.log(jony[i])  ; 
    var lalu = jony[i];
    
- var bodu = lalu.parentNode.nextElementSibling.firstElementChild;
+ var bod = lalu.parentNode;
+ 
+ var bo =bod.nextElementSibling
+ 
+var bodu = bo.firstElementChild;
    
 // console.log(parent);
 
@@ -156,7 +162,16 @@ var boduReturn = localStorage.getItem(boduId);
 bodu.value=boduReturn;  
   
   
- }     
+ }
+ 
+//////>>>>>>>>///////>>
+
+//////>>>>>>>>///////>> 
+ 
+ 
+ 
+ 
+ 
      
 };
 
@@ -234,8 +249,10 @@ localStorage.setItem('data',slides);
 console.log(slides);
 }
 
+var slider = document.querySelector('.slider'); 
+
 function restoreSlider(){
- var slider = document.querySelector('.slider') ;     
+// var slider = document.querySelector('.slider') ;     
 var recieve = localStorage.getItem('data') ;
 //console.log(recieve);
  var div = document.createElement("div");
@@ -248,6 +265,7 @@ console.log(div);
 
 slider.parentNode.replaceChild(div, slider);
 
+
 }
 
 
@@ -255,16 +273,58 @@ slider.parentNode.replaceChild(div, slider);
 
 ///////>>>>>
 
+
 // on load
 
-window.addEventListener('load',ev=>{
-restoreSlider();     
- restore();    
+
+
+//////////|/>
+document.addEventListener('DOMContentLoaded', function() {
+     
+///////>>>>     
+try {
+  // Code that may throw an exception
+  var d= localStorage.getItem('data');
+
+if(d===null||d===undefined){
+    console.log('data is not stored');
+}else{
+ //restoreSlider();
+ console.log('trying to store data');
+ restoreSlider();
+}
+////>
+  restore();
+  
+  ///>
+} catch (error) {
+  // Code to handle the exception
+  console.error("An error occurred:", error.message);
+} finally {
+  // Code that will be executed regardless of whether an exception occurred
+  console.log("This block always runs");
+  ///>
+//restoreSlider(); 
+
+
+
+
+
+
+
+}
+///////>>>>     
+     
+//restore();
+
 });
-//>
+
+///////////>
+
 window.addEventListener('beforeunload',ev=>{
+storeSlider();
 store(); 
-//storeSlider();
+//alert('200')
 })
 
 
@@ -272,5 +332,18 @@ store();
 /////////////////>
 document.querySelector('.bton').addEventListener('click',()=>{
   //store();
-  storeSlider();
-})
+  //storeSlider();
+ // alert('stored')
+ restore();
+});
+
+document.querySelector('.bton').addEventListener('dblclick',()=>{
+  //store();
+  restoreSlider();
+  alert('restored')
+});
+
+
+
+////////>
+//alert('200')
